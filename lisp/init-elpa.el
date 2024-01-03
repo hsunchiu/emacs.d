@@ -15,9 +15,18 @@
 
 ;;; Standard package repositories
 
-(add-to-list 'package-archives '( "melpa" . "https://melpa.org/packages/") t)
+;;(add-to-list 'package-archives '( "melpa" . "https://melpa.org/packages/") t)
 ;; Official MELPA Mirror, in case necessary.
 ;;(add-to-list 'package-archives (cons "melpa-mirror" (concat proto "://www.mirrorservice.org/sites/melpa.org/packages/")) t)
+
+
+;; In China, the network is blocked by GFW
+(setq package-archives '(
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+                         ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+                         ("nogpu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+                         ))
 
 
 
